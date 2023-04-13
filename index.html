@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-template-name="index">
+  <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+  <link href="css/app.css" rel="stylesheet"></head>
+  <body>
+    <div class="preloader"></div>
+    <header class="header text-white border-bottom position-fixed w-100 bg-body zi-1000">
+      <div class="container">
+        <nav class="header__nav navbar navbar-expand-lg justify-content-end justify-content-lg-start">
+          <div class="header__nav_in d-lg-flex align-items-center justify-content-lg-start w-100" id="navbarToggler">
+            <ul class="header__nav_list text-center col-12 col-lg-auto me-lg-auto mb-2 justify-content-start mb-md-0 navbar-collapse py-10 py-lg-0">
+              <li class="header__nav_item pe-6 mb-8 mb-lg-0"><a class="header__nav_link fs-6 nav-link text-secondary d-inline active" href="#" data-title="Photos">Photos</a></li>
+              <li class="header__nav_item pe-6 mb-8 mb-lg-0"><a class="header__nav_link fs-6 nav-link text-secondary d-inline" href="#" data-title="Videos">Videos</a></li>
+              <li class="header__nav_item pe-6 mb-8 mb-lg-0"><a class="header__nav_link fs-6 nav-link text-secondary d-inline" href="#" data-title="Podcasts">Podcasts</a></li>
+            </ul>
+            <form class="col-12 col-lg-6 mb-3 mb-lg-0 mx-auto">
+              <div class="position-relative"><span class="input-group-btn position-absolute">
+                  <button class="btn p-2" type="button"><i>
+                      <svg class="icon icon_search ">
+                        <use xlink:href="images/sprite/sprite.svg#search"></use>
+                      </svg></i></button></span>
+                <input class="form-control rounded-6 ps-8" type="search" placeholder="Search for anything..." aria-label="Search">
+              </div>
+            </form>
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end col-lg-2">
+              <div class="dropdown me-6">
+                <button class="btn btn-link px-0 dropdown-toggle" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">English<i>
+                    <svg class="icon icon_chevron-down ">
+                      <use xlink:href="images/sprite/sprite.svg#chevron-down"></use>
+                    </svg></i></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">UK</a></li>
+                  <li><a class="dropdown-item" href="#">PL</a></li>
+                </ul>
+              </div>
+              <button class="btn btn-link px-0" type="button">Sign in</button>
+            </div>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon bg-dark"></span></button>
+        </nav>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="base">
+        <section class="container py-9 js-animation">
+          <div class="row">
+            <aside class="col-xl-3 p-0">
+              <ul class="d-flex d-xl-block flex-wrap">
+                <li>
+                  <button class="w-100 d-flex flex-nowrap btn active" type="button"><i class="me-2">
+                      <svg class="icon icon_pictures icon--size_mod">
+                        <use xlink:href="images/sprite/sprite.svg#pictures"></use>
+                      </svg></i><span>All photos</span></button>
+                </li>
+                <li>
+                  <button class="w-100 d-flex flex-nowrap btn" type="button"><i class="me-2">
+                      <svg class="icon icon_smiley icon--size_mod">
+                        <use xlink:href="images/sprite/sprite.svg#smiley"></use>
+                      </svg></i><span>Selfies</span></button>
+                </li>
+                <li>
+                  <button class="w-100 d-flex flex-nowrap btn" type="button"><i class="me-2">
+                      <svg class="icon icon_clock icon--size_mod">
+                        <use xlink:href="images/sprite/sprite.svg#clock"></use>
+                      </svg></i><span>Recent</span></button>
+                </li>
+                <li>
+                  <button class="w-100 d-flex flex-nowrap btn" type="button"><i class="me-2">
+                      <svg class="icon icon_trash icon--size_mod">
+                        <use xlink:href="images/sprite/sprite.svg#trash"></use>
+                      </svg></i><span>Deleted</span></button>
+                </li>
+              </ul>
+            </aside>
+            <article class="col-xl-8 offset-xl-1">
+              <div class="d-sm-flex justify-content-between flex-wrap mb-5 mb-sm-0">
+                <h1 class="mb-5 mb-sm-2">All photos</h1>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button class="btn btn-secondary" type="button">Newest</button>
+                  <button class="btn btn-outline-secondary" type="button">Latest</button>
+                </div>
+              </div>
+              <div class="row mb-7">
+                <div class="col-8"><small>150 items</small></div>
+              </div>
+              <ul class="cards__list d-lg-flex flex-lg-wrap me-lg-n6 mb-lg-n6" id="card-container">
+                <li class="cards__item pe-lg-6 pb-lg-6 mb-8 mb-lg-0 js-fade">
+                  <div class="card overflow-hidden">
+                    <picture class="position-relative"><img class="cover_img position-absolute top-0 left-0" src="images/card_img_1.jpg" alt="img card"></picture>
+                    <div class="px-6 pt-6 pb-10 position-relative js-card-content">
+                      <h3 class="card-title">Heading</h3>
+                      <p class="overflow-hidden m-0 card-text fs-6">Here goes some sample, example text that is relatively short.</p>
+                      <button class="btn-link position-absolute fs-6 bottom-4 start-6" type="button" aria-label="show more">Show more...</button>
+                    </div>
+                    <div class="px-4 py-4 border-top">
+                      <ul class="d-flex me-n4 mb-n4">
+                        <li class="pe-4 pb-4"><a class="btn btn-primary" href="#">Save to collection</a></li>
+                        <li class="pe-4 pb-4"><a class="btn btn-outline-secondary" href="#">Share</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item pe-lg-6 pb-lg-6 mb-8 mb-lg-0 js-fade">
+                  <div class="card overflow-hidden">
+                    <picture class="position-relative"><img class="cover_img position-absolute top-0 left-0" src="images/card_img_2.jpg" alt="img card"></picture>
+                    <div class="px-6 pt-6 pb-10 position-relative js-card-content">
+                      <h3 class="card-title">Heading</h3>
+                      <p class="overflow-hidden m-0 card-text fs-6">And here full text doesn’t fit, and at the very end of it we should show a truncatio. And here full text doesn’t fit, and at the very end of it we should show a truncatio.And here full text doesn’t fit, and at the very end of it we should show a truncatio.And here full text doesn’t fit, and at the very end of it we should show a truncatio.</p>
+                      <button class="btn-link position-absolute fs-6 bottom-4 start-6" type="button" aria-label="show more">Show more...</button>
+                    </div>
+                    <div class="px-4 py-4 border-top">
+                      <ul class="d-flex me-n4 mb-n4">
+                        <li class="pe-4 pb-4"><a class="btn btn-primary" href="#">Save to collection</a></li>
+                        <li class="pe-4 pb-4"><a class="btn btn-outline-secondary" href="#">Share</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item pe-lg-6 pb-lg-6 mb-8 mb-lg-0 js-fade">
+                  <div class="card overflow-hidden">
+                    <picture class="position-relative"><img class="cover_img position-absolute top-0 left-0" src="images/card_img_3.jpg" alt="img card"></picture>
+                    <div class="px-6 pt-6 pb-10 position-relative js-card-content">
+                      <h3 class="card-title">Heading</h3>
+                      <p class="overflow-hidden m-0 card-text fs-6">And here full text doesn’t fit, and at the very end of it we should show a truncatio. Here goes some sample, example text that is relatively short.</p>
+                      <button class="btn-link position-absolute fs-6 bottom-4 start-6" type="button" aria-label="show more">Show more...</button>
+                    </div>
+                    <div class="px-4 py-4 border-top">
+                      <ul class="d-flex me-n4 mb-n4">
+                        <li class="pe-4 pb-4"><a class="btn btn-primary" href="#">Save to collection</a></li>
+                        <li class="pe-4 pb-4"><a class="btn btn-outline-secondary" href="#">Share</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item pe-lg-6 pb-lg-6 mb-8 mb-lg-0 js-fade">
+                  <div class="card overflow-hidden">
+                    <picture class="position-relative"><img class="cover_img position-absolute top-0 left-0" src="images/card_img_4.jpg" alt="img card"></picture>
+                    <div class="px-6 pt-6 pb-10 position-relative js-card-content">
+                      <h3 class="card-title">Heading</h3>
+                      <p class="overflow-hidden m-0 card-text fs-6">Here goes some sample, example text that is relatively short.</p>
+                      <button class="btn-link position-absolute fs-6 bottom-4 start-6" type="button" aria-label="show more">Show more...</button>
+                    </div>
+                    <div class="px-4 py-4 border-top">
+                      <ul class="d-flex me-n4 mb-n4">
+                        <li class="pe-4 pb-4"><a class="btn btn-primary" href="#">Save to collection</a></li>
+                        <li class="pe-4 pb-4"><a class="btn btn-outline-secondary" href="#">Share</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+  <script defer src="js/app.js"></script></body>
+</html>
