@@ -1,0 +1,13 @@
+@import 'helpers/global-mixins.scss';
+@import 'helpers/helpers-all.scss';
+@import 'bscore_variables';
+@import 'bootstrap/bootstrap';
+@import 'bscore_style';
+@import 'bscore_custom';
+
+@import 'base';
+
+//components
+@import 'components/header';
+@import 'components/cards';
+@import 'components/sidebar';

@@ -1,0 +1,48 @@
+mixin header
+	header.header.text-white.border-bottom.position-fixed.w-100.bg-body.zi-1000
+		.container
+			nav.header__nav.navbar.navbar-expand-lg.justify-content-end.justify-content-lg-start
+				#navbarToggler.header__nav_in.d-lg-flex.align-items-center.justify-content-lg-start.w-100
+					ul.header__nav_list.text-center.col-12.col-lg-auto.me-lg-auto.mb-2.justify-content-start.mb-md-0.navbar-collapse.py-10.py-lg-0
+						each item, index in [{link:'Photos', mod: 'active'}, {link:'Videos'}, {link: 'Podcasts'}]
+							li.header__nav_item.pe-6.mb-8.mb-lg-0
+								a.header__nav_link.fs-6.nav-link.text-secondary.d-inline(
+									class=item.mod,
+									href='#',
+									data-title=item.link
+								)!= item.link
+
+					form.col-12.col-lg-6.mb-3.mb-lg-0.mx-auto
+						.position-relative
+							span.input-group-btn.position-absolute
+								button.btn.p-2(type='button')
+									i
+										+icon('search')
+							input.form-control.rounded-6.ps-8(
+								type='search',
+								placeholder='Search for anything...',
+								aria-label='Search'
+							)
+					.d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-lg-end.col-lg-2
+						.dropdown.me-6
+							button#dropdownMenuButton.btn.btn-link.px-0.dropdown-toggle(
+								type='button',
+								data-bs-toggle='dropdown',
+								aria-expanded='false'
+							) English
+								i
+									+icon('chevron-down')
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton')
+								each item in ['UK', 'PL']
+									li
+										a.dropdown-item(href='#')!= item
+						button.btn.btn-link.px-0(type='button') Sign in
+				button.navbar-toggler(
+					type='button',
+					data-bs-toggle='collapse',
+					data-bs-target='#navbarToggler',
+					aria-controls='navbarToggler',
+					aria-expanded='false',
+					aria-label='Toggle navigation'
+				)
+					span.navbar-toggler-icon.bg-dark

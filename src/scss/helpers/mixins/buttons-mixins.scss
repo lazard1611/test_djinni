@@ -1,0 +1,61 @@
+@mixin st_btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	white-space: nowrap;
+	font-family: $font;
+
+	cursor: pointer;
+
+	&[type='submit'] {
+		@include appearance(none);
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+//color mixins:
+@mixin btn_style_primary {
+	font-weight: 700;
+	color: $white;
+	background-color: rgba($white, 0);
+	transition: background-color 0.3s ease;
+	border: 1px solid $white;
+
+	@include st_btn;
+
+	&:hover {
+		background-color: rgba($white, 0.2);
+	}
+}
+
+@mixin btn_style_black {
+	font-weight: 700;
+	color: $gray-100;
+	background-color: rgba($white, 0);
+	transition: background-color 0.3s ease;
+	border: 1px solid $gray-100;
+
+	@include st_btn;
+
+	&:hover {
+		background-color: rgba($gray-100, 0.1);
+	}
+}
+
+//size mixins:
+@mixin btn_size {
+	width: 100%;
+	height: 57px;
+	padding: 0 32px;
+
+	line-height: 57px;
+	font-size: 18px;
+
+	border-radius: 0;
+}

@@ -1,0 +1,113 @@
+/*!
+ * bootScore custom styles
+ */
+
+// Add your own code here!
+// Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
+// Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
+
+/*-----------------------------------------------------------------------------
+
+  ATTENTION! This is the parent-theme's file. Your work will be lost by the
+  next update!
+
+  Wouldn't you prefer to use one of our child themes and be update-safe?
+
+  bootscore-child:
+  https://github.com/bootscore/bootscore-child/archive/refs/heads/main.zip
+
+  bootcommerce-child:
+  https://github.com/bootscore/bootcommerce-child/archive/refs/heads/main.zip
+
+-----------------------------------------------------------------------------*/
+
+.cover_img {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+i {
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+small {
+	font-size: 0.875rem;
+}
+
+input::placeholder {
+	letter-spacing: 0.01em;
+	font-size: $input-font-size;
+}
+
+/*-------------Custom bootstrap elem----------------*/
+.btn {
+	&.btn-primary {
+		font-weight: 700;
+		color: $white;
+	}
+
+	&.btn-outline-secondary {
+		font-weight: 700;
+		border-color: $gray-200;
+
+		&:not(:hover) {
+			color: $black;
+		}
+	}
+
+	&.btn-link {
+		text-decoration: none;
+
+		&:not(:hover) {
+			color: $secondary;
+		}
+	}
+}
+
+.form-control {
+	border-radius: 5.25rem;
+	border: none;
+
+	&:focus {
+		color: $black;
+	}
+}
+
+.dropdown-toggle {
+	@extend .pe-5;
+	position: relative;
+
+	&:after {
+		display: none;
+	}
+
+	i {
+		position: absolute;
+		top: 50%;
+		right: -1px;
+		margin-top: -0.75rem;
+		transition: transform 0.3s ease;
+	}
+
+	&.show {
+		i {
+			transform: rotate(180deg);
+		}
+	}
+}

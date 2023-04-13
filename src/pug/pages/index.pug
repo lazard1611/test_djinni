@@ -1,0 +1,70 @@
+extends ../layout/layout
+
+block vars
+	include ../templates/mixins/m-card
+
+	- array = { body_class: '', layout_mod: '', sub_keywords: '', title_inner: 'Index', template_name: 'index' };
+
+block content_block
+	-
+		sidebar_list= [
+			{
+				mod: 'active',
+				icon: 'pictures',
+				text: 'All photos',
+			},
+			{
+				icon: 'smiley',
+				text: 'Selfies',
+			},
+			{
+				icon: 'clock',
+				text: 'Recent',
+			},
+			{
+				icon: 'trash',
+				text: 'Deleted',
+			},
+		]
+
+		card_list= [
+			{
+				descrip: 'Here goes some sample, example text that is relatively short.',
+			},
+			{
+				descrip: 'And here full text doesn’t fit, and at the very end of it we should show a truncatio. And here full text doesn’t fit, and at the very end of it we should show a truncatio.And here full text doesn’t fit, and at the very end of it we should show a truncatio.And here full text doesn’t fit, and at the very end of it we should show a truncatio.',
+			},
+			{
+				descrip: 'And here full text doesn’t fit, and at the very end of it we should show a truncatio. Here goes some sample, example text that is relatively short.',
+			},
+			{
+				descrip: 'Here goes some sample, example text that is relatively short.',
+			},
+		]
+
+	section.container.py-9.js-animation
+		.row
+			aside.col-xl-3.p-0
+				ul.d-flex.d-xl-block.flex-wrap
+					each item in sidebar_list
+						li
+							button.w-100.d-flex.flex-nowrap.btn(type='button', class=item.mod)
+								i.me-2
+									+icon(item.icon, 'icon--size_mod')
+								span!= item.text
+			article.col-xl-8.offset-xl-1
+				.d-sm-flex.justify-content-between.flex-wrap.mb-5.mb-sm-0
+					h1.mb-5.mb-sm-2 All photos
+					.btn-group(
+						role='group',
+						aria-label='Basic example'
+					)
+						button.btn.btn-secondary(type='button') Newest
+						button.btn.btn-outline-secondary(type='button') Latest
+				.row.mb-7
+					.col-8
+						small 150 items
+				ul#card-container.cards__list.d-lg-flex.flex-lg-wrap.me-lg-n6.mb-lg-n6
+					each item, index in card_list
+						li.cards__item.pe-lg-6.pb-lg-6.mb-8.mb-lg-0.js-fade
+							+card({img: `card_img_${index + 1}.jpg`, ...item})

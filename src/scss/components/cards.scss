@@ -1,0 +1,16 @@
+.card {
+	picture {
+		padding-top: 56%;
+	}
+
+	button {
+		all: unset;
+		display: none;
+	}
+}
+
+.cards__item {
+	@include bp($lg, min) {
+		width: 50%;
+	}
+}

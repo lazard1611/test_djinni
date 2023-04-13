@@ -1,0 +1,19 @@
+mixin card(data)
+	.card.overflow-hidden
+		picture.position-relative
+			img.cover_img.position-absolute.top-0.left-0(
+				src=`images/${data.img}`,
+				alt='img card'
+			)
+		.px-6.pt-6.pb-10.position-relative.js-card-content
+			h3.card-title Heading
+			p.overflow-hidden.m-0.card-text.fs-6!= data.descrip
+			button.btn-link.position-absolute.fs-6.bottom-4.start-6(
+				type='button',
+				aria-label='show more'
+			) Show more...
+		.px-4.py-4.border-top
+			ul.d-flex.me-n4.mb-n4
+				each item in [{ mod: 'btn-primary', btn: 'Save to collection'}, {mod: 'btn-outline-secondary', btn: 'Share'}]
+					li.pe-4.pb-4
+						a.btn(class=item.mod, href='#')!= item.btn
