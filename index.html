@@ -74,7 +74,7 @@
       <div class="base">
         <div class="container py-9 js-animation">
           <div class="row">
-            <aside class="col-xl-3 p-0">
+            <aside class="col-xl-3 p-0 position-relative">
               <ul class="d-flex d-xl-block flex-wrap">
                 <li>
                   <button class="w-100 d-flex flex-nowrap btn active" type="button"><i class="me-2">
@@ -102,7 +102,7 @@
                 </li>
               </ul>
             </aside>
-            <article class="col-xl-8 offset-xl-1">
+            <article class="col-xl-8 offset-xl-1 position-relative">
               <div class="d-sm-flex justify-content-between flex-wrap mb-5 mb-sm-0">
                 <h1 class="mb-5 mb-sm-2">All photos</h1>
                 <div class="btn-group" role="group" aria-label="Basic example">
@@ -179,6 +179,8 @@
                   </div>
                 </li>
               </ul>
+              <div class="load_dots js-dots-load d-flex position-absolute start-50"><span class="load_dot mx-2 bg-primary opacity-50 rounded-circle"></span><span class="load_dot mx-2 bg-primary opacity-50 rounded-circle"></span><span class="load_dot mx-2 bg-primary opacity-50 rounded-circle"></span>
+              </div>
             </article>
           </div>
         </div>
