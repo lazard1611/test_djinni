@@ -44,7 +44,7 @@ block content_block
 
 	.container.py-9.js-animation
 		.row
-			aside.col-xl-3.p-0
+			aside.col-xl-3.p-0.position-relative
 				ul.d-flex.d-xl-block.flex-wrap
 					each item in sidebar_list
 						li
@@ -52,7 +52,7 @@ block content_block
 								i.me-2
 									+icon(item.icon, 'icon--size_mod')
 								span!= item.text
-			article.col-xl-8.offset-xl-1
+			article.col-xl-8.offset-xl-1.position-relative
 				.d-sm-flex.justify-content-between.flex-wrap.mb-5.mb-sm-0
 					h1.mb-5.mb-sm-2 All photos
 					.btn-group(
@@ -68,3 +68,7 @@ block content_block
 					each item, index in card_list
 						li.cards__item.pe-lg-6.pb-lg-6.mb-8.mb-lg-0.js-fade
 							+card({img: `card_img_${index + 1}.jpg`, ...item})
+
+				.load_dots.js-dots-load.d-flex.position-absolute.start-50
+					+loop_while(3)
+						span.load_dot.mx-2.bg-primary.opacity-50.rounded-circle

@@ -45,3 +45,38 @@ body {
 		padding: 4.5rem 0 0;
 	}
 }
+
+.load_dots {
+	transform: translateX(-50%);
+	bottom: -2rem;
+
+	&:not(.load_dots--load_state) {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.load_dot {
+	position: relative;
+	width: .5rem;
+	height: .5rem;
+
+	.load_dots--load_state & {
+		animation-name: load;
+		animation-iteration-count: infinite;
+		animation-direction: alternate-reverse;
+	}
+
+	&:nth-child(odd) {
+		animation-duration: .3s;
+	}
+}
+
+@keyframes load {
+	0% {
+		top: -.2rem;
+	}
+	100% {
+		top: .2rem;
+	}
+}
