@@ -7,7 +7,6 @@ const infiniteScroll = () => {
 	window.addEventListener('scroll', () => {
 		const { clientHeight, scrollHeight, scrollTop } = document.documentElement;
 		if (scrollHeight <= scrollTop + clientHeight && isScrollBottom) {
-
 			isScrollBottom = false;
 			$dots.classList.add(activeClass);
 		} else {
