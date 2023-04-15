@@ -1,5 +1,6 @@
 import layout from 'layout/layout';
 import bootstrap from 'vendors/bootstrap.bundle.min';
+import darkThem from './components/dark-theme';
 import { pageLoad } from './utils';
 
 export default class App {
@@ -10,7 +11,6 @@ export default class App {
 			this.$htmlTag.dataset.templateName.length > 0
 				? this.$htmlTag.dataset.templateName
 				: null;
-
 		this.init = this.init.bind(this);
 		this.init();
 	}
@@ -36,6 +36,10 @@ export default class App {
 		const initLayout = layout();
 		pageLoad(() => {
 			document.body.classList.add('body--loaded');
+			document.body.classList.toggle(
+				'dark',
+				window.localStorage.getItem('darkmode') === 'true',
+			);
 		});
 
 		const dropdownTrigger = $('[data-bs-toggle="dropdown"]');
@@ -43,6 +47,7 @@ export default class App {
 
 		setTimeout(() => {
 			this.importPage();
+			darkThem();
 		}, 0);
 	}
 }

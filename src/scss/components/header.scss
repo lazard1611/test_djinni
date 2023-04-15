@@ -11,6 +11,20 @@
 	}
 
 	height: var(--height-header);
+	transition: all 0.3s ease;
+
+	.dark & {
+		background-color: $black_1 !important;
+
+		ul {
+			background-color: $black_1 !important;
+		}
+
+		a,
+		button {
+			color: $white !important;
+		}
+	}
 }
 
 .header__nav_link {
@@ -19,7 +33,7 @@
 	&:before {
 		position: absolute;
 		left: -0.1px;
-		bottom: 0.1rem;
+		bottom: 0.5px;
 		width: 102%;
 		height: 100%;
 

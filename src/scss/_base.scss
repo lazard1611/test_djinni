@@ -10,6 +10,16 @@
 	}
 }
 
+body {
+	transition: all 0.3s ease;
+
+	&.dark {
+		background-color: $black_1;
+		color: $white;
+	}
+}
+
+
 .wrapper {
 	position: relative;
 

@@ -1,0 +1,28 @@
+.theme_btn {
+	all: unset;
+	z-index: 100;
+	position: fixed;
+	left: .6rem;
+
+	padding: 0.4rem;
+
+	cursor: pointer;
+
+	@include bp($lg, min) {
+		top: calc(100vh - 3rem);
+	}
+
+	@include bp($lg - 1) {
+		top: 5rem;
+	}
+}
+
+.theme_btn__icon {
+	display: block;
+	width: 1.4rem;
+	height: 1.4rem;
+
+	.body--dark_mod {
+		color: $white;
+	}
+}

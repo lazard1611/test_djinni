@@ -20,9 +20,20 @@ const animation = () => {
 		trigger: $section,
 		start: 'top-=100 top',
 		end: 'bottom bottom',
-		markers: true,
+		// markers: true,
 		animation: tl,
 	});
+
+	tl.fromTo(
+		$section,
+		{
+			opacity: 0,
+		},
+		{
+			opacity: 1,
+			delay: 0.2,
+		},
+	);
 
 	tl.fromTo(
 		$items,

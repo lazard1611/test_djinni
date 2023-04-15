@@ -7,6 +7,14 @@
 		all: unset;
 		display: none;
 	}
+
+	.dark & {
+		background-color: $black_1;
+
+		a {
+			color: $white !important;
+		}
+	}
 }
 
 .cards__item {
