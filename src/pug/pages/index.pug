@@ -59,12 +59,18 @@ block content_block
 						role='group',
 						aria-label='Basic example'
 					)
-						button.btn.btn-secondary(type='button' aria-label='Newest') Newest
-						button.btn.btn-outline-secondary(type='button' aria-label='Latest') Latest
+						button.btn.btn-secondary(
+							type='button',
+							aria-label='Newest'
+						) Newest
+						button.btn.btn-outline-secondary(
+							type='button',
+							aria-label='Latest'
+						) Latest
 				.row.mb-7
 					.col-8
 						small 150 items
-				ul#card-container.cards__list.d-lg-flex.flex-lg-wrap.me-lg-n6.mb-lg-n6
+				ul.cards__list.js-cards-list.d-lg-flex.flex-lg-wrap.me-lg-n6.mb-lg-n6
 					each item, index in card_list
 						li.cards__item.pe-lg-6.pb-lg-6.mb-8.mb-lg-0.js-fade
 							+card({img: `card_img_${index + 1}.jpg`, ...item})

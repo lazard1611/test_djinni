@@ -12,13 +12,13 @@
 
 body {
 	transition: all 0.3s ease;
+	opacity: 0;
 
 	&.dark {
 		background-color: $black_1;
 		color: $white;
 	}
 }
-
 
 .wrapper {
 	position: relative;
@@ -49,6 +49,7 @@ body {
 .load_dots {
 	transform: translateX(-50%);
 	bottom: -2rem;
+	transition: opacity 0.3s ease;
 
 	&:not(.load_dots--load_state) {
 		opacity: 0;
@@ -58,8 +59,8 @@ body {
 
 .load_dot {
 	position: relative;
-	width: .5rem;
-	height: .5rem;
+	width: 0.5rem;
+	height: 0.5rem;
 
 	.load_dots--load_state & {
 		animation-name: load;
@@ -68,15 +69,15 @@ body {
 	}
 
 	&:nth-child(odd) {
-		animation-duration: .3s;
+		animation-duration: 0.3s;
 	}
 }
 
 @keyframes load {
 	0% {
-		top: -.2rem;
+		top: -0.2rem;
 	}
 	100% {
-		top: .2rem;
+		top: 0.2rem;
 	}
 }

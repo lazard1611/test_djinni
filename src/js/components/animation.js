@@ -24,6 +24,8 @@ const animation = () => {
 		animation: tl,
 	});
 
+	tl.to('body', { opacity: 1 });
+
 	tl.fromTo(
 		$section,
 		{

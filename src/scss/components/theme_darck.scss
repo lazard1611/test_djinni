@@ -1,8 +1,8 @@
 .theme_btn {
 	all: unset;
-	z-index: 100;
+	z-index: 1001;
 	position: fixed;
-	left: .6rem;
+	left: 0.6rem;
 
 	padding: 0.4rem;
 
@@ -13,7 +13,7 @@
 	}
 
 	@include bp($lg - 1) {
-		top: 5rem;
+		top: 1rem;
 	}
 }
 
