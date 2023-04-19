@@ -1,3 +1,5 @@
+import hiddenText from './hidden-text';
+
 const infiniteScroll = () => {
 	const selectors = {
 		cardsList: '.js-cards-list',
@@ -43,6 +45,7 @@ const infiniteScroll = () => {
 `;
 
 		$cardsList.appendChild(cardItem);
+		hiddenText();
 	};
 
 	const getCards = () => {

@@ -6,8 +6,8 @@ import handleSideBtn from 'components/side-buttons';
 const index = () => {
 	animation();
 	infiniteScroll();
-	hiddenText();
 	handleSideBtn();
+	hiddenText();
 };
 
 export default index;
